@@ -2,7 +2,9 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { dictionaries } from '../../../../lib/dictionaries';
 import { getRecipeById, recipes } from '../../../../data/recipes';
+import { generateRecipeStructuredData } from '../../../../lib/structured-data';
 import Navigation from '../../../../components/Navigation';
+import PrintRecipeButton from '../../../../components/PrintRecipeButton';
 import Footer from '../../../../components/Footer';
 
 interface PageProps {
@@ -29,8 +31,17 @@ export default function RecipePage({ params }: PageProps) {
   if (!recipe) {
     notFound();
   }
+
+  const structuredData = generateRecipeStructuredData(recipe);
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
       <Navigation dict={dict} lang={params.lang} />
       
       {/* Recipe Header */}
@@ -86,6 +97,11 @@ export default function RecipePage({ params }: PageProps) {
                     {tag}
                   </span>
                 ))}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-4 pt-4">
+                <PrintRecipeButton recipe={recipe} />
               </div>
             </div>
           </div>

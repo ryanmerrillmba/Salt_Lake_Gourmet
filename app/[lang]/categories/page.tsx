@@ -10,6 +10,10 @@ interface PageProps {
   };
 }
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }];
+}
+
 export default function CategoriesPage({ params }: PageProps) {
   const dict = dictionaries[params.lang as keyof typeof dictionaries] || dictionaries.en;
 
@@ -34,7 +38,7 @@ export default function CategoriesPage({ params }: PageProps) {
     {
       id: 'salt-lake-favorites',
       name: 'Salt Lake City Favorites',
-      description: 'Recipes inspired by Salt Lake City\'s unique food culture',
+      description: 'Recipes inspired by Salt Lake City&apos;s unique food culture',
       icon: '🍽️',
       recipes: saltLakeRecipes,
       color: 'from-emerald-500 to-teal-500'

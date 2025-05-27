@@ -15,6 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://saltlakegourmet.com'),
   title: "Salt Lake City Gourmet Recipes | Foodie Paradise",
   description: "Discover exceptional gourmet recipes perfect for Salt Lake City food enthusiasts. From mountain-inspired cuisine to international flavors, elevate your culinary journey.",
   keywords: "Salt Lake City recipes, gourmet cooking, Utah food, foodie recipes, mountain cuisine, culinary Salt Lake",

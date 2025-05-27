@@ -1,0 +1,8 @@
+# Redirect root to /en
+/  /en  301
+
+# Handle trailing slashes
+/en/*  /en/:splat  301
+
+# Handle 404s
+/*  /404.html  404

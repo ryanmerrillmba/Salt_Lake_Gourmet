@@ -33,7 +33,7 @@ export default function HeroSection({ dict, lang }: HeroSectionProps) {
               <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-800 text-base font-bold rounded-full border border-emerald-200 shadow-lg">
                 🏔️ Inspired by Utah&apos;s Mountains
               </div>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] text-balance">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[1.1] text-balance">
                 <span className="bg-gradient-to-r from-emerald-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">
                   Gourmet Recipes
                 </span>
@@ -88,7 +88,7 @@ export default function HeroSection({ dict, lang }: HeroSectionProps) {
 
           {/* Enhanced Hero Image */}
           <div className="relative animate-slide-in-right">
-            <div className="relative h-[500px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700 group">
+            <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl transform rotate-1 lg:rotate-3 hover:rotate-0 transition-transform duration-700 group">
               <Image
                 src="/images/IMG_20160628_192942.jpg"
                 alt="Gourmet food presentation showcasing Salt Lake City culinary excellence"
@@ -104,17 +104,17 @@ export default function HeroSection({ dict, lang }: HeroSectionProps) {
             </div>
             
             {/* Enhanced Floating Elements */}
-            <div className="absolute -bottom-12 -left-12 glass p-8 rounded-3xl shadow-2xl animate-float border border-white/20">
+            <div className="absolute -bottom-8 -left-8 md:-bottom-12 md:-left-12 glass p-6 md:p-8 rounded-3xl shadow-2xl animate-float border border-white/20">
               <div className="text-center">
-                <div className="text-4xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">50+</div>
-                <div className="text-sm text-gray-700 font-bold">Gourmet Recipes</div>
+                <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">50+</div>
+                <div className="text-xs md:text-sm text-gray-700 font-bold">Gourmet Recipes</div>
               </div>
             </div>
             
-            <div className="absolute -top-12 -right-12 glass p-8 rounded-3xl shadow-2xl animate-float border border-white/20" style={{animationDelay: '2s'}}>
+            <div className="absolute -top-8 -right-8 md:-top-12 md:-right-12 glass p-6 md:p-8 rounded-3xl shadow-2xl animate-float border border-white/20" style={{animationDelay: '2s'}}>
               <div className="text-center">
-                <div className="text-4xl">⭐</div>
-                <div className="text-sm text-gray-700 font-bold">Utah Specialties</div>
+                <div className="text-3xl md:text-4xl">⭐</div>
+                <div className="text-xs md:text-sm text-gray-700 font-bold">Utah Specialties</div>
               </div>
             </div>
 

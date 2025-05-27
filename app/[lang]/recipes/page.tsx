@@ -10,6 +10,10 @@ interface PageProps {
   };
 }
 
+export async function generateStaticParams() {
+  return [{ lang: 'en' }];
+}
+
 export default function RecipesPage({ params }: PageProps) {
   const dict = dictionaries[params.lang as keyof typeof dictionaries] || dictionaries.en;
 
